@@ -1,7 +1,7 @@
 # Expected Output: Simple interface, calculator. Correct usage of exception handling and the raise method.
 
 
-#define number checking for selection
+#define function to catch strings. 
 def selection_check(selection):
     try:
         operation = int(selection)
@@ -9,6 +9,7 @@ def selection_check(selection):
     except ValueError:
         operation = 'null'
         return(operation)
+
 #Make a simple UI upon opening
 print("==============================\nPy-Calc v1.0\n-by Lorenzo Pinon, in Python\n==============================")
 print(" ")
@@ -24,8 +25,12 @@ while not stop_counter:
     operation = selection_check(selection)
 
     if operation is 'null':
-        print("invalid input. Please try again.")
+        print(" \ninvalid input. Please try again.")
     
     if not operation is 'null':
         if operation > 5 or operation < 1:
-            print("The number is out of range. Please try again.")
+            print(" \nThe number is out of range. Please try again.")
+    
+    if not operation is 'null' and operation is 5:
+        print(" \nGoodbye! Closing the application.")
+        stop_counter = True
