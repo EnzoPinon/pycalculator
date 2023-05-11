@@ -84,7 +84,7 @@ while not stop_counter:
         
         print(" \ninputs are validated! Calculating...")
         #finally, we can add.
-        deduct_difference = first + second
+        deduct_difference = first - second
 
         #print results
         print("==============================")
