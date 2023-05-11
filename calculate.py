@@ -94,3 +94,25 @@ while not stop_counter:
         print("==============================")
         print(" \nCalculation complete! Thank you for using py-calc!")
 
+    if not operation is 'null' and operation is 3:
+        print(" \nYou have selected **Multiplication!**")
+        num1 = input("Please input first number: ")
+        num2 = input("please input second number: ")
+        first, second = number_validator(num1, num2)
+
+        #collect results from validation system
+        if first is 'not_valid' or second is 'not_valid':
+            print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
+        
+        print(" \ninputs are validated! Calculating...")
+        #finally, we can add.
+        product = first * second
+
+        #print results
+        print("==============================")
+        print("Your first number is: ", first)
+        print("Your second number is: ", second)
+        print("Their product is: ", product)
+        print("==============================")
+        print(" \nCalculation complete! Thank you for using py-calc!")
+
