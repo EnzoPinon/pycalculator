@@ -66,18 +66,18 @@ while not stop_counter:
         #collect results from validation system
         if first is 'not_valid' or second is 'not_valid':
             print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
-        
-        print(" \ninputs are validated! Calculating...")
-        #finally, we can add.
-        add_sum = first + second
+        else:
+            print(" \ninputs are validated! Calculating...")
+            #finally, we can add.
+            add_sum = first + second
 
-        #print results
-        print("==============================")
-        print("Your first number is: ", first)
-        print("Your second number is: ", second)
-        print("Their sum is: ", add_sum)
-        print("==============================")
-        print(" \nCalculation complete! Thank you for using py-calc!")
+            #print results
+            print("==============================")
+            print("Your first number is: ", first)
+            print("Your second number is: ", second)
+            print("Their sum is: ", add_sum)
+            print("==============================")
+            print(" \nCalculation complete! Thank you for using py-calc!")
     
     if not operation is 'null' and operation is 2:
         print(" \nYou have selected **Subtraction!**")
@@ -88,18 +88,18 @@ while not stop_counter:
         #collect results from validation system
         if first is 'not_valid' or second is 'not_valid':
             print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
-        
-        print(" \ninputs are validated! Calculating...")
-        #finally, we can add.
-        deduct_difference = first - second
+        else:
+            print(" \ninputs are validated! Calculating...")
+            #finally, we can add.
+            deduct_difference = first - second
 
-        #print results
-        print("==============================")
-        print("Your first number is: ", first)
-        print("Your second number is: ", second)
-        print("Their difference is: ", deduct_difference)
-        print("==============================")
-        print(" \nCalculation complete! Thank you for using py-calc!")
+            #print results
+            print("==============================")
+            print("Your first number is: ", first)
+            print("Your second number is: ", second)
+            print("Their difference is: ", deduct_difference)
+            print("==============================")
+            print(" \nCalculation complete! Thank you for using py-calc!")
 
     if not operation is 'null' and operation is 3:
         print(" \nYou have selected **Multiplication!**")
@@ -110,18 +110,18 @@ while not stop_counter:
         #collect results from validation system
         if first is 'not_valid' or second is 'not_valid':
             print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
-        
-        print(" \ninputs are validated! Calculating...")
-        #finally, we can add.
-        product = first * second
+        else:
+            print(" \ninputs are validated! Calculating...")
+            #finally, we can add.
+            product = first * second
 
-        #print results
-        print("==============================")
-        print("Your first number is: ", first)
-        print("Your second number is: ", second)
-        print("Their product is: ", product)
-        print("==============================")
-        print(" \nCalculation complete! Thank you for using py-calc!")
+            #print results
+            print("==============================")
+            print("Your first number is: ", first)
+            print("Your second number is: ", second)
+            print("Their product is: ", product)
+            print("==============================")
+            print(" \nCalculation complete! Thank you for using py-calc!")
 
     if not operation is 'null' and operation is 4:
         print(" \nYou have selected **Division!**")
@@ -132,19 +132,19 @@ while not stop_counter:
         #collect results from validation system
         if first is 'not_valid' or second is 'not_valid':
             print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
-        
-        print(" \ninputs are validated! Calculating...")
-        #use function to attempt division
-        quotient = division_check(first, second)
-        #check if division returned a ZeroDivisionError exception
-        if quotient is 'second_is_zero':
-            print("You cannot divide a number by zero. Returning to main screen.")
-        
-        #print results
-        print("==============================")
-        print("Your first number is: ", first)
-        print("Your second number is: ", second)
-        print("Their quotient is: ", quotient)
-        print("==============================")
-        print(" \nCalculation complete! Thank you for using py-calc!")
+        else:
+            print(" \ninputs are validated! Calculating...")
+            #use function to attempt division
+            quotient = division_check(first, second)
+            #check if division returned a ZeroDivisionError exception
+            if quotient is 'second_is_zero':
+                print("You cannot divide a number by zero. Returning to main screen.")
+            else:
+                #print results
+                print("==============================")
+                print("Your first number is: ", first)
+                print("Your second number is: ", second)
+                print("Their quotient is: ", quotient)
+                print("==============================")
+                print(" \nCalculation complete! Thank you for using py-calc!")
 
