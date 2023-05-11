@@ -10,6 +10,20 @@ def selection_check(selection):
         operation = 'null'
         return(operation)
 
+def number_validator(num1, num2):
+    #validate first number
+    try:
+        first = int(num1)
+    except:
+        first = 'not_valid'
+    #validate second number
+    try:
+        second = int(num2)
+    except:
+        second = 'not_valid'
+    return(first, second)
+
+
 #Make a simple UI upon opening
 print("==============================\nPy-Calc v1.0\n-by Lorenzo Pinon, in Python\n==============================")
 print(" ")
@@ -34,3 +48,12 @@ while not stop_counter:
     if not operation is 'null' and operation is 5:
         print(" \nGoodbye! Closing the application.")
         stop_counter = True
+    
+    if not operation is 'null' and operation is 1:
+        print(" \nYou have selected **Addition!**")
+        num1 = input("Please input first number: ")
+        num2 = input("please input second number: ")
+        first, second = number_validator(num1, num2)
+
+        if first is 'not_valid' or second is 'not_valid':
+            print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
