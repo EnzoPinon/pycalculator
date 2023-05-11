@@ -10,6 +10,7 @@ def selection_check(selection):
         operation = 'null'
         return(operation)
 
+#define function to validate the inputted numbers.
 def number_validator(num1, num2):
     #validate first number
     try:
@@ -55,5 +56,19 @@ while not stop_counter:
         num2 = input("please input second number: ")
         first, second = number_validator(num1, num2)
 
+        #collect results from validation system
         if first is 'not_valid' or second is 'not_valid':
             print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
+        
+        print(" \ninputs are validated! Calculating...")
+        #finally, we can add.
+        add_sum = first + second
+
+        #print results
+        print("==============================")
+        print("Your first number is: ", first)
+        print("Your second number is: ", second)
+        print("Their sum is: ", add_sum)
+        print("==============================")
+        print(" \nCalculation complete! Thank you for using py-calc!")
+
