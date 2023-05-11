@@ -24,6 +24,13 @@ def number_validator(num1, num2):
         second = 'not_valid'
     return(first, second)
 
+def division_check(first, second):
+    #attempt division
+    try:
+        quotient = first / second
+    except ZeroDivisionError:
+        quotient = 'second_is_zero'
+    return(quotient)
 
 #Make a simple UI upon opening
 print("==============================\nPy-Calc v1.0\n-by Lorenzo Pinon, in Python\n==============================")
@@ -113,6 +120,31 @@ while not stop_counter:
         print("Your first number is: ", first)
         print("Your second number is: ", second)
         print("Their product is: ", product)
+        print("==============================")
+        print(" \nCalculation complete! Thank you for using py-calc!")
+
+    if not operation is 'null' and operation is 4:
+        print(" \nYou have selected **Division!**")
+        num1 = input("Please input first number: ")
+        num2 = input("please input second number: ")
+        first, second = number_validator(num1, num2)
+
+        #collect results from validation system
+        if first is 'not_valid' or second is 'not_valid':
+            print(" \nOne of the inputs are not a valid integer. Returning to main screen.")
+        
+        print(" \ninputs are validated! Calculating...")
+        #use function to attempt division
+        quotient = division_check(first, second)
+        #check if division returned a ZeroDivisionError exception
+        if quotient is 'second_is_zero':
+            print("You cannot divide a number by zero. Returning to main screen.")
+        
+        #print results
+        print("==============================")
+        print("Your first number is: ", first)
+        print("Your second number is: ", second)
+        print("Their quotient is: ", quotient)
         print("==============================")
         print(" \nCalculation complete! Thank you for using py-calc!")
 
