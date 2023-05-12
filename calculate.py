@@ -14,12 +14,12 @@ def selection_check(selection):
 def number_validator(num1, num2):
     #validate first number
     try:
-        first = int(num1)
+        first = float(num1)
     except:
         first = 'not_valid'
     #validate second number
     try:
-        second = int(num2)
+        second = float(num2)
     except:
         second = 'not_valid'
     return(first, second)
